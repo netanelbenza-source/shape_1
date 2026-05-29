@@ -24,14 +24,14 @@ class ShapeManager:
     def update_shape(self, shape_id, new_data):
         pass
     def delete_shape(self, shape_id):
-        # for i,dict in enumerate(self.shapes):
-        #     if dict.get("id") == shape_id:
-        #             self.shapes.pop(i)
-        #             self.save_to_json()
-        #             print("Tha shape delete successfully")
-        # else:
-        #     raise ID_ERROR(" Does not exist in the system ")
-        pass   
+        for i,dict in enumerate(self.shapes):
+            if dict.get("id") == shape_id:
+                    self.shapes.pop(i)
+                    self.save_to_json()
+                    print("Tha shape delete successfully")
+        else:
+            raise ID_ERROR(" Does not exist in the system ")
+           
             
 
 
@@ -90,17 +90,17 @@ def create_shape(choice,inserte):
         case _:
             raise ValueError()    
        
-# def delete_shape(insert):
-#     while True:
-#         try:
-#             choice = int(input(" please enter ID for the shape to delete :"))
-#             try:
-#                 insert.delete_shape(choice)
-#             except ID_ERROR:
-#                  print(" ID_ERROR : Does not exist in the system ")
-#             break
-#         except ValueError:
-#             print(" error!!! : enter value only with tipe int ")
+def delete_shape(insert):
+    while True:
+        try:
+            choice = int(input(" please enter ID for the shape to delete :"))
+            try:
+                insert.delete_shape(choice)
+            except ID_ERROR:
+                 print(" ID_ERROR : Does not exist in the system ")
+            break
+        except ValueError:
+            print(" error!!! : enter value only with tipe int ")
 
         
 

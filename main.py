@@ -27,8 +27,8 @@ def loading_create_shape(choice,inserte):
                                       
 
 
-# def loading_delete_shape(insert):
-#     shape_manager.delete_shape(insert)
+def loading_delete_shape(insert):
+    shape_manager.delete_shape(insert)
 
 
 
@@ -44,8 +44,8 @@ def main():
                 loading_create_shape(choice,manajer)
             
             case "2":
-                # print(manajer.get_all_shapes())
-                pass
+                print(manajer.get_all_shapes())
+                
             
             case "3":
                 pass
