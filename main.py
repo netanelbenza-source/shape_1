@@ -1,4 +1,4 @@
-import shape ,rectangle,square,circle,shape_manager
+import shape_manager
 
 def get_manu() -> None :
     print("    ____MENU_____    ")
@@ -31,6 +31,9 @@ def loading_delete_shape(insert):
     shape_manager.delete_shape(insert)
 
 
+def loading_update_shape(insert):
+    shape_manager.update_shape(insert)
+
 
 def main():
     manajer = shape_manager.ShapeManager()
@@ -48,7 +51,7 @@ def main():
                 
             
             case "3":
-                pass
+                loading_update_shape(manajer)
             
             case "4":
                 loading_delete_shape(manajer)
